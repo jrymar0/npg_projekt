@@ -1,12 +1,34 @@
-#include "include.h"
-//#include "tasks.txt"
+#include "task_manager.h"
+#include <iostream>
 
-void Task::printTask() const {
-    std::cout << "Nazwa zadania: " << name << std::endl;
-    std::cout << "Opis zadania: " << description << std::endl;
+void TaskManager::addTask(const std::string& name, const std::string& description) {
+    //zaimplementować
 }
 
-void Task::deleteTask() {
-    //zaimplementować bo nie wiem jak
-    std::cout<<"Usunięto klasę: "<<name<<std::endl;
+void TaskManager::printTasks() {
+    std::cout << "Saved tasks:\n";;
+    for (size_t i = 0; i < tasks.size(); ++i) {
+        std::cout << i + 1 << ". " << tasks[i].name << ": " << tasks[i].description << '\n';
+    }
 }
+void TaskManager::deleteTask(int index) {
+    //zaimplementować
+}
+
+void TaskManager::clearTasks() {
+    //zaimplementować
+}
+
+void TaskManager::editTask(int index, const std::string& name, const std::string& description) {
+    //zaimplementować
+}
+
+void TaskManager::loadTasks() {
+    //zaimplementować
+}
+
+void TaskManager::saveTasks() {
+    //zaimplementować
+}
+
+

@@ -1,10 +1,10 @@
-#include "include.h"
-#include <vector>
+#include "task_manager.h"
+
+#include <iostream>
+
 
 int main(){
-    std::vector<Task> tasks;
-    Task task("nazwa","opis");
-    tasks.push_back(task);
-    tasks[0].printTask();
+    TaskManager taskManager("tasks.txt");
+
     return 0;
 }

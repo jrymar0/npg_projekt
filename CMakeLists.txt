@@ -6,6 +6,6 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(.)
 
 add_executable(npg_projekt
-        include.h
+        task_manager.h
         src.cpp
         main.cpp)
