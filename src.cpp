@@ -12,11 +12,23 @@ void TaskManager::printTasks() {
     }
 }
 void TaskManager::deleteTask(int index) {
-    //zaimplementować
+    if (index >= 0 && index < tasks.size()) {
+
+        tasks.erase(tasks.begin() + index);
+
+        saveTasks();
+
+    } else {
+
+        std::cout << "Invalid task index\n";
+
+    }
 }
 
 void TaskManager::clearTasks() {
-    //zaimplementować
+    tasks.clear();
+
+    saveTasks();
 }
 
 void TaskManager::editTask(int index, const std::string& name, const std::string& description) {
@@ -30,5 +42,3 @@ void TaskManager::loadTasks() {
 void TaskManager::saveTasks() {
     //zaimplementować
 }
-
-
