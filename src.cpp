@@ -2,7 +2,10 @@
 #include <iostream>
 
 void TaskManager::addTask(const std::string& name, const std::string& description) {
-    //zaimplementować
+    Task newTask = {name, description};
+    tasks.push_back(newTask);
+    saveTasks();
+}
 }
 
 void TaskManager::printTasks() {
@@ -32,7 +35,14 @@ void TaskManager::clearTasks() {
 }
 
 void TaskManager::editTask(int index, const std::string& name, const std::string& description) {
-    //zaimplementować
+    if (index >= 0 && index < tasks.size()) {
+        tasks[index].name = name;
+        tasks[index].description = description;
+        saveTasks();
+    } else {
+        std::cout << "Invalid task index\n";
+    }
+}
 }
 
 void TaskManager::loadTasks() {
