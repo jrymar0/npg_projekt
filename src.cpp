@@ -1,11 +1,11 @@
 #include "task_manager.h"
 #include <iostream>
+#include <fstream>
 
 void TaskManager::addTask(const std::string& name, const std::string& description) {
     Task newTask = {name, description};
     tasks.push_back(newTask);
     saveTasks();
-}
 }
 
 void TaskManager::printTasks() {
@@ -16,21 +16,15 @@ void TaskManager::printTasks() {
 }
 void TaskManager::deleteTask(int index) {
     if (index >= 0 && index < tasks.size()) {
-
         tasks.erase(tasks.begin() + index);
-
         saveTasks();
-
     } else {
-
         std::cout << "Invalid task index\n";
-
     }
 }
 
 void TaskManager::clearTasks() {
     tasks.clear();
-
     saveTasks();
 }
 
@@ -43,10 +37,18 @@ void TaskManager::editTask(int index, const std::string& name, const std::string
         std::cout << "Invalid task index\n";
     }
 }
-}
 
 void TaskManager::loadTasks() {
-    //zaimplementować
+    tasks.clear();
+    std::ifstream file(filepath);
+    if (file.is_open()) {
+        std::string name, description;
+        while (std::getline(file, name) && std::getline(file, description)) {
+            Task task = {name, description};
+            tasks.push_back(task);
+        }
+        file.close();
+    }
 }
 
 void TaskManager::saveTasks() {

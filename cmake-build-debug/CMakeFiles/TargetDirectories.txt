@@ -1,0 +1,3 @@
+/Users/jarekrymar/Documents/NPG/npg_projekt/cmake-build-debug/CMakeFiles/npg_projekt.dir
+/Users/jarekrymar/Documents/NPG/npg_projekt/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/jarekrymar/Documents/NPG/npg_projekt/cmake-build-debug/CMakeFiles/rebuild_cache.dir

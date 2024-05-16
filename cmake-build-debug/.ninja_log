@@ -1,0 +1,7 @@
+# ninja log v5
+1	494	1715601703224506881	CMakeFiles/npg_projekt.dir/main.cpp.o	9e61aae64b1b824f
+1	501	1715601703231763625	CMakeFiles/npg_projekt.dir/src.cpp.o	fa9e3d6376863f25
+501	566	1715601703300770278	npg_projekt	1e033bb31636ae00
+3	453	1715872957973990770	CMakeFiles/npg_projekt.dir/main.cpp.o	9e61aae64b1b824f
+3	516	1715872958037477297	CMakeFiles/npg_projekt.dir/src.cpp.o	fa9e3d6376863f25
+516	566	1715872958089296071	npg_projekt	1e033bb31636ae00
