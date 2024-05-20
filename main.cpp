@@ -23,11 +23,21 @@ int main() {
 
         switch (choice) {
             case 1: {
-                //zaimplementować
+                std::string name, description;
+                std::cout << "Podaj nazwę zadania: ";
+                std::cin.ignore();
+                getline(std::cin, name);
+                std::cout << "Podaj opis zadania: ";
+                getline(std::cin, description);
+                taskManager.addTask(name, description);
+                std::cout<<std::endl;
                 break;
             }
             case 2: {
-                //zaimplementować
+                taskManager.printTasks();
+                std::cout<<std::endl<<"naciśnij enter aby przejść dalej..."<<std::endl;
+                getchar();
+                getchar(); // nie wiadomo czemu nie działa jak jest tylko jeden XD
                 break;
             }
             case 3: {
