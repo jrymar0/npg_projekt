@@ -52,5 +52,13 @@ void TaskManager::loadTasks() {
 }
 
 void TaskManager::saveTasks() {
-    //zaimplementować
+    std::ofstream file(filepath);
+    if (file.is_open()) {
+        for (const auto& task : tasks) {
+            file << task.name << '\n';
+            file << task.description << '\n';
+        }
+        file.close();
+    }
 }
+
