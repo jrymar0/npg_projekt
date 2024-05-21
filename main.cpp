@@ -41,17 +41,17 @@ int main() {
                 break;
             }
             case 3: {
-				int index;
-	            std::cout << "Podaj indeks zadania do usunięcia: ";
-	            std::cin >> index;
-	            taskManager.deleteTask(index - 1);
-	            std::cout<<std::endl;
-	            break;
+                int index;
+                std::cout << "Podaj indeks zadania do usunięcia: ";
+                std::cin >> index;
+                taskManager.deleteTask(index - 1);
+                std::cout<<std::endl;
+                break;
             }
             case 4: {
                 taskManager.clearTasks();
-				std::cout << std::endl;
-				break;
+                std::cout << std::endl;
+                break;
             }
             case 5: {
                 //zaimplementować
