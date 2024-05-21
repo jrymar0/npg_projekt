@@ -42,7 +42,7 @@ int main() {
             }
             case 3: {
 				int index;
-	            std::cout << "Podaj indeks zadania do usuniêcia: ";
+	            std::cout << "Podaj indeks zadania do usuniÄ™cia: ";
 	            std::cin >> index;
 	            taskManager.deleteTask(index - 1);
 	            std::cout<<std::endl;
