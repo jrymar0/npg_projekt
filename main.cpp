@@ -54,7 +54,17 @@ int main() {
                 break;
             }
             case 5: {
-                //zaimplementować
+                int index;
+                std::string name, description;
+                std::cout << "Podaj indeks zadania do edycji: ";
+                std::cin >> index;
+                std::cout << "Podaj nową nazwę zadania: ";
+                std::cin.ignore();
+                getline(std::cin, name);
+                std::cout << "Podaj nowy opis zadania: ";
+                getline(std::cin, description);
+                taskManager.editTask(index - 1, name, description);
+                std::cout<<std::endl;
                 break;
             }
             case 6: {
